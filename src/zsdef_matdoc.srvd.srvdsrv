@@ -1,0 +1,4 @@
+@EndUserText.label: 'Serv.Def for Mat.Doc Table'
+define service ZSDEF_MATDOC {
+  expose ZCCDS_MATDOC;
+}

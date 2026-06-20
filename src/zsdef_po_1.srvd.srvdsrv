@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Purchase Order'
+define service ZSDEF_PO_1 {
+  expose ZC_PURCHASEORDER_MB;
+}

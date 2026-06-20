@@ -1,0 +1,26 @@
+managed implementation in class zbp_cds_execlog21 unique;
+strict ( 2 );
+//with draft;
+
+define behavior for ZCDS_EXECLOG21 //alias <alias_name>
+persistent table ZEXECUTION_LOG2
+lock master
+authorization master ( instance )
+//etag master id
+{
+  field ( readonly ) id, StatusCriticality, VendorNumber, InvoiceNumber;
+
+  create;
+  update;
+  delete;
+
+  mapping for ZCDS_EXECLOG21 {
+      VendorName = vendorname;
+      VendorMail = vendormail;
+      VendorNumber = vendornumber;
+      Mailinvdocname = mailinvdocname;
+      DocDate = docdate;
+      InvoiceNumber = invoicenumber;
+      Message = message;
+  }
+}

@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Execution log'
+define service ZSDEF_EXEC_LOG {
+  expose ZCDS_EXECLOG21;
+}

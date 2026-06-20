@@ -1,0 +1,68 @@
+@AbapCatalog.viewEnhancementCategory: [#NONE]
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Purchase Order API for consumption'
+@Metadata.ignorePropagatedAnnotations: true
+@ObjectModel.usageType:{
+    serviceQuality: #X,
+    sizeCategory: #S,
+    dataClass: #MIXED
+}
+define root view entity ZC_PURCHASEORDER_MB as select from I_PurchaseOrderAPI01
+{
+    key PurchaseOrder,
+    PurchaseOrderType,
+    PurchaseOrderSubtype,
+    PurchasingDocumentOrigin,
+    CreatedByUser,
+    CreationDate,
+    PurchaseOrderDate,
+    Language,
+    CorrespncExternalReference,
+    CorrespncInternalReference,
+    PurchasingDocumentDeletionCode,
+    ReleaseIsNotCompleted,
+    PurchasingCompletenessStatus,
+    PurchasingProcessingStatus,
+    PurgReleaseSequenceStatus,
+    ReleaseCode,
+    CompanyCode,
+    PurchasingOrganization,
+    PurchasingGroup,
+    Supplier,
+    ManualSupplierAddressID,
+    SupplierRespSalesPersonName,
+    SupplierPhoneNumber,
+    SupplyingSupplier,
+    InvoicingParty,
+    Customer,
+    SupplierQuotationExternalID,
+    PaymentTerms,
+    CashDiscount1Days,
+    CashDiscount2Days,
+    NetPaymentDays,
+    CashDiscount1Percent,
+    CashDiscount2Percent,
+    DownPaymentType,
+    DownPaymentPercentageOfTotAmt,
+    @Semantics.amount.currencyCode: 'DocumentCurrency'
+    DownPaymentAmount,
+    DownPaymentDueDate,
+    IncotermsClassification,
+    IncotermsTransferLocation,
+    IncotermsVersion,
+    IncotermsLocation1,
+    IncotermsLocation2,
+    IsIntrastatReportingRelevant,
+    IsIntrastatReportingExcluded,
+    PricingDocument,
+    PricingProcedure,
+    DocumentCurrency,
+    ValidityStartDate,
+    ValidityEndDate,
+    ExchangeRate,
+    ExchangeRateIsFixed,
+    LastChangeDateTime,
+    TaxReturnCountry,
+    VATRegistrationCountry,
+    PurgReasonForDocCancellation
+}

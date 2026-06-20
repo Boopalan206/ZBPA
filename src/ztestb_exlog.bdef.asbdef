@@ -1,0 +1,13 @@
+managed implementation in class zbp_testb_exlog unique;
+strict ( 2 );
+
+define behavior for ZTESTB_EXLOG //alias <alias_name>
+persistent table ZEXECUTION_LOG2
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+}

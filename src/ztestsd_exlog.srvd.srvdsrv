@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Execution log'
+define service ZTESTSD_EXLOG {
+  expose ZTESTB_EXLOG;
+}
